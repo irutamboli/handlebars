@@ -28,22 +28,25 @@ app.set('views', './views');
 
 
 
+const name=(req,res)=>{
+    console.log(req.query)
+    res.send("irfan")
+}
 
 
 
-app.get("/portfoliopage", (req, res) => {
+app.get("/portfoliopage",  (req, res) => {
    
     res.render('portfoliopage', { data: data })
 })
 
-const name = (req, res) => {
-    console.log(req.query);
-    res.send("IRFAN")
+
+app.get("/about",name)
     
-   }
-app.get("/about",name) 
-
-
+        
+        
+    
+    
 
 
 app.listen(9800, () => {
